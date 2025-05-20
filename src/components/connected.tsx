@@ -5,12 +5,15 @@ import { toast } from "sonner";
 
 
 export default function Connected() {
-  const { data: session, status } = useSession();
+  const session = useSession();
+  const status = session.status;
+  const user = session.data?.user;
+
 
   useEffect(() => {
     if (status === "authenticated") {
       toast.success("Bienvenue !", {
-        description: `Vou êtes connecté en tant que ${session.user?.name || "utilisateur"} !`,
+        description: `Vou êtes connecté en tant que ${user?.name || "utilisateur"} !`,
       });
     }
   }, [status, session]);
