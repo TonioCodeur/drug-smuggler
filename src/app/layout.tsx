@@ -2,6 +2,7 @@ import { ModeToggle } from "@/components/theme-toggle";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -39,6 +40,7 @@ export default function RootLayout({
           <div className="fixed bottom-4 right-4">
             <ModeToggle />
           </div>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
