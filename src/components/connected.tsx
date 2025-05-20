@@ -3,12 +3,9 @@ import { useSession } from "next-auth/react";
 import { useEffect } from "react";
 import { toast } from "sonner";
 
-
 export default function Connected() {
-  const session = useSession();
-  const status = session.status;
-  const user = session.data?.user;
-
+  const { data, status } = useSession() || { data: undefined, status: undefined };
+  const user = data?.user;
 
   useEffect(() => {
     if (status === "authenticated") {
@@ -16,7 +13,7 @@ export default function Connected() {
         description: `Vou êtes connecté en tant que ${user?.name || "utilisateur"} !`,
       });
     }
-  }, [status, session]);
+  }, [status, user?.name]);
 
   return null;
 }
