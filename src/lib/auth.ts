@@ -1,9 +1,9 @@
-import PostgresAdapter from "@auth/pg-adapter"
 import NextAuth from "next-auth"
+import PostgresAdapter from "@auth/pg-adapter"
 import GoogleProvider from "next-auth/providers/google"
 import { Pool } from "pg"
 
-export const { handlers, auth, signIn, signOut } = NextAuth({
+const handler = NextAuth({
   adapter: PostgresAdapter(new Pool({ connectionString: process.env.DATABASE_URL })),
   providers: [
     GoogleProvider({
@@ -12,3 +12,5 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     })
   ]
 })
+
+export { handler as GET, handler as POST }
