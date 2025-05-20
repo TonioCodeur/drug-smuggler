@@ -4,8 +4,8 @@ import { useEffect } from "react";
 import { toast } from "sonner";
 
 export default function Connected() {
-  const { data, status } = useSession() || { data: undefined, status: undefined };
-  const user = data?.user;
+  const { data: session, status } = useSession() || { data: undefined, status: undefined };
+  const user = session?.user;
 
   useEffect(() => {
     if (status === "authenticated") {
