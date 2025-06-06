@@ -2,11 +2,10 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { AlertTriangle, Shield } from "lucide-react";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { Shield, AlertTriangle } from "lucide-react";
-import Image from "next/image";
 
 export default function LoginPage() {
   const { data: session, status } = useSession();
@@ -77,7 +76,7 @@ export default function LoginPage() {
             className="text-red-600"
             onClick={() => router.push("/")}
           >
-            Retour à l'accueil
+            Retour à l&apos;accueil
           </Button>
         </CardFooter>
       </Card>
