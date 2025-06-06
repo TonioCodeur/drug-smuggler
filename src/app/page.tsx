@@ -53,7 +53,7 @@ export default function Home() {
             Drug Smuggler
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            Devenez le baron de la drogue le plus redouté du monde souterrain
+            Devenez le baron de la drogue le plus redouth&eacute; du monde souterrain
           </p>
           <div className="flex gap-4 justify-center">
             {session ? (
