@@ -62,7 +62,7 @@ export default function Home() {
                 className="bg-red-600 hover:bg-red-700"
                 onClick={() => router.push('/game')}
               >
-                Continuer l'aventure
+                Continuer l&apos;aventure
               </Button>
             ) : (
               <Button 
