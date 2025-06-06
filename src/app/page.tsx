@@ -2,9 +2,9 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { useSession, signIn } from "next-auth/react";
+import { Briefcase, DollarSign, Globe, Shield, Truck, Users } from "lucide-react";
+import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import { Briefcase, DollarSign, Shield, Users, Truck, Globe } from "lucide-react";
 
 export default function Home() {
   const { data: session } = useSession();
@@ -111,7 +111,7 @@ export default function Home() {
       <section className="py-20 px-4 bg-gradient-to-b from-transparent via-red-950/10 to-transparent">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Prêt à dominer le marché noir ?
+          Pr&ecirc;t à dominer le march&eacute; noir ?
           </h2>
           <p className="text-lg text-gray-400 mb-8">
             Rejoignez des milliers de joueurs dans la plus grande simulation de contrebande en ligne
