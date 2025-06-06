@@ -1,6 +1,7 @@
-import { ModeToggle } from "@/components/theme-toggle";
-import { Providers } from "@/components/providers";
+import Connected from "@/components/connected";
 import { Navbar } from "@/components/navbar";
+import { Providers } from "@/components/providers";
+import { ModeToggle } from "@/components/theme-toggle";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -46,6 +47,7 @@ export default function RootLayout({
             <div className="fixed bottom-4 right-4 z-50">
               <ModeToggle />
             </div>
+            <Connected />
             <Toaster />
           </ThemeProvider>
         </Providers>
