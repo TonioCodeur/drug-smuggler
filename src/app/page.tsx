@@ -64,7 +64,7 @@ export default function Home() {
               width={700} 
               height={700}
               priority
-              className="max-h-[500px] w-auto"
+              className="rounded-xl md:max-h-[700px] sm:max-h-[300px] w-auto"
             />
           </div>
           <div className="flex gap-4 justify-center">
