@@ -4,7 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Briefcase, DollarSign, Globe, Shield, Truck, Users } from "lucide-react";
 import { signIn, useSession } from "next-auth/react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
+
 
 export default function Home() {
   const { data: session } = useSession();
@@ -46,15 +48,25 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-red-950 via-gray-900 to-black opacity-90"></div>
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+        <div className="relative z-10 text-center max-w-4xl mx-auto px-4 py-20">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
             Drug Smuggler
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
             Devenez le baron de la drogue le plus redouth&eacute; du monde souterrain
           </p>
+          <div className="flex justify-center mb-8">
+            <Image 
+              src="/images/money.png" 
+              alt="Drug Smuggler" 
+              width={700} 
+              height={700}
+              priority
+              className="max-h-[500px] w-auto"
+            />
+          </div>
           <div className="flex gap-4 justify-center">
             {session ? (
               <Button 
